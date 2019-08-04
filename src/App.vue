@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <ToDoList msg="Welcome to Your Vue.js App"/>
+          </div>
+       </div>
+    </div>
   </div>
 </template>
 
