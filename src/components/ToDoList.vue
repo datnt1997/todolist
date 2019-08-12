@@ -8,7 +8,7 @@
           class="form-control"
           placeholder="Type your link"
           aria-label="Link"
-          v-model="image"
+          v-model="src"
           aria-describedby="basic-addon1"
         />
       </div>
@@ -18,9 +18,7 @@
     </div>
     <div class="row">
       <div class="col-10 offset-1 image">
-        <img
-          src="https://www.gannett-cdn.com/presto/2019/03/21/USAT/8fe58296-17ac-46ac-828a-1c6e3ce684f1-XXX_FORREST-GUMP-MOV-jy-1930-.JPG?width=540&height=&fit=bounds&auto=webp"
-        />
+        <img v-bind:src="src" />
       </div>
     </div>
     <!-- <ToDoItem /> -->
@@ -31,13 +29,14 @@
 import ToDoItem from "./ToDoItem.vue";
 export default {
   name: "ToDoList",
-  data: {
-    src: ""
+  data: function () {
+    return {
+      src: ''
+    }
   },
   components: {
     ToDoItem
   }
-
 };
 </script>
 
